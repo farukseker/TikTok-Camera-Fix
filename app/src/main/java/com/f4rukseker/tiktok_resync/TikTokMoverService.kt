@@ -40,7 +40,7 @@ class TikTokMoverService : Service() {
     // Matches exactly 32 arbitrary characters followed by a TikTok media
     // extension (video or image). Equivalent to the wildcard mask:
     // ????????????????????????????????.mp4 / .jpg / .jpeg / .png
-    private val tiktokFileRegex = Regex("^.{32}\\.(mp4|jpg|jpeg|png)$", RegexOption.IGNORE_CASE)
+    private val tiktokFileRegex = Regex("^.{32}\\.(mp4|jpg|jpeg|png|webp)$", RegexOption.IGNORE_CASE)
 
     private val sourceDir: File by lazy {
         File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM), "Camera")
